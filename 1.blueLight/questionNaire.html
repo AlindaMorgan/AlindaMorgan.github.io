@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>questionNaire</title>
+<link rel="stylesheet" href="style.css" class="css" />
+<style type="text/css">
+/*questionNaire*/
+.questionNaire .mask{width:90%; height:80%}
+.questionNaire h2{font-size:48px; color:#fff; padding:30px 0 0 50px}
+.questionNaire h3{font-size:36px; color:#fff; width:100%; height:100px; line-height:100px; text-align:center; letter-spacing:0.1em; background:rgba(255,255,255,0.2)}
+.questionNaire h5{font-size:24px; padding:70px 0 0 200px}
+/*questionNaireL*/
+.questionNaireL,.questionNaireR{position:absolute}
+.questionNaireL,.questionNaireR{width:54px; height:88px; display:block}
+.questionNaireL{bottom:240px; left:50px; background-position:-130px 0}
+.questionNaireL:hover{background-position:0 0}
+/*questionNaireR*/
+.questionNaireR{bottom:246px; left:92%; background-position:-190px 0}
+.questionNaireR:hover{background-position:-50px 0}
+/*questionNaireC*/
+.questionNaireC{font-size:24px; font-weight:bold}
+.questionNaireC p{padding-left:10px; letter-spacing:0.1em; border:3px solid rgba(0,0,0,0)}
+.questionNaireC input{margin:20px 0}
+.questionNaireC span{padding-left:20px}
+.questionNaireFour h5{padding-top:20px}
+.questionNaireFive h5{padding:0}
+/*QNFLeft,QNFRight*/
+.QNFLeft,.QNFRight{float:left; display:block}
+.QNFLeft{line-height:1.2em; padding-top:70px; width:40%}
+.QNFLeft b{color:#F00}
+.QNFRight{width:280px; height:270px; background-position:0 -100px; margin:20px 0 0 50px}
+.questionNaireFive p{font-size:24px; font-weight:bold; position:relative; top:360px; right:400px}
+/*滚动*/
+.box{width:900px; height:420px; margin:0 auto}
+.box div{overflow:hidden; width:100%; height:420px; position:relative; top:50px; left:60px}
+ul{width:4500px; height:420px; position:absolute; left:100px; top:0}
+ul li{width:800px; margin-left:100px; height:420px; float:left}
+.box div ul .questionNaireFive{margin-left:0}
+/*选中*/
+.questionNaireC .now{width:600px; height:57px; border:3px solid #ff0; -webkit-box-shadow:0 0 35px #ffe001; box-shadow:0 0 35px #ffe001; -webkit-border-radius:15px; border-radius:15px}
+</style>
+</head>
+
+<body>
+<div id="bg">
+	<div class="questionNaire">
+        <h2>活动</h2>
+        <div class="mask">
+            <h3>蓝光专区用户调查问卷</h3>
+           	<div class="box">
+                <div>
+                    <ul>
+                        <li class="questionNaireOne">
+                            <form class="questionNaireC">
+                                <h4>1、您收看蓝光专区时是否存在以下问题（可多选）</h4>
+                                <p><label><input type="checkbox" checked="checked"/><span></span>画面卡顿模糊</label></p>
+                                <p><label><input type="checkbox" /><span></span>有图像无声音</label></p>
+                                <p><label><input type="checkbox" /><span></span>直播频道无信号</label></p>
+                                <p><label><input type="checkbox" /><span></span>收看正常，感觉棒棒哒！</label></p>
+                            </form>
+                            <h5>1/5</h5>
+                        </li>
+                        <li class="questionNaireTwo">
+                            <form class="questionNaireC">
+                                <h4>2、您是否了解自己家的宽带速率？</h4>
+                                <p><label><input type="radio" name="two" checked="checked"/><span></span>6M（这个速率看不了蓝光啦）</label></p>
+                                <p><label><input type="radio" name="two" /><span></span>8M （这个速率也看不了蓝光啦）</label></p>
+                                <p><label><input type="radio" name="two"/><span></span>12M（这个速率还是看不了蓝光呀）</label></p>
+                                <p><label><input type="radio" name="two" /><span></span>20M（恭喜你，具备蓝光一族的条件了）</label></p>
+                            </form>
+                            <h5>2/5</h5>
+                        </li>
+                        <li class="questionNaireThree">
+                            <form class="questionNaireC">
+                                <h4>3、您希望在蓝光专区看到哪些节目内容？(可多选）</h4>
+                                <p><label><input type="checkbox" checked="checked"/><span></span>院线新片</label></p>
+                                <p><label><input type="checkbox" /><span></span>纪实节目</label></p>
+                                <p><label><input type="checkbox" /><span></span>综艺节目</label></p>
+                                <p><label><input type="checkbox" /><span></span>好莱坞经典</label></p>
+                            </form>
+                            <h5>3/5</h5>
+                        </li>
+                        <li class="questionNaireFour">
+                            <form class="questionNaireC">
+                                <h4>4、蓝光专区即将推出收费内容，包括百部电影大片、<br />娱乐，纪实节目，并且每月更新最新高清热门<br />片源节目。请问您每月愿意为此付费的标准是：</h4>
+                                <p><label><input type="radio" name="two" checked="checked"/><span></span>98元/月</label></p>
+                                <p><label><input type="radio" name="two" /><span></span>68元/月</label></p>
+                                <p><label><input type="radio" name="two"/><span></span>58元/月</label></p>
+                                <p><label><input type="radio" name="two" /><span></span>神马？付费的话就不看了！</label></p>
+                            </form>
+                            <h5>4/5</h5>
+                        </li>
+                        <li class="questionNaireFive">
+                        	<span class="QNFLeft">   	
+                        		<h5>感谢您参加我们的调查，如果您对蓝光专区有更多的意见和建议，欢迎关注我们的微信服务号“广东IPTV”，回复  #蓝光# +  您的意见 ，<b>有机会获得首映新片的赠看权利噢。</b></h5>
+                            </span>
+                            <span class="QNFRight cssJL"></span>
+                            <p>5/5</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a class="questionNaireL cssJL"></a>
+            <a class="questionNaireR cssJL"></a>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+//选中选项
+$('.questionNaireC p').hover(function(){
+	$(this).addClass('now');
+	},function(){
+	$(this).removeClass('now');
+})
+
+//轮播
+var num = 0;
+$('.questionNaireL').click(function(){
+	// 选中下一项
+	num--;
+	if(num < 0){
+		num = 4;	
+	}
+	// 显示对应的li
+	$('ul').stop().animate({left:-880 * num});
+	// 排他
+})
+
+$('.questionNaireR').click(function(){
+	// 选中下一项
+	num++;
+	if(num > 4){
+		num = 0;	
+	}
+	// 显示对应的li
+	$('ul').stop().animate({left:-880 * num});
+	// 排他 
+})
+
+
+
+
+
+</script>
+</html>

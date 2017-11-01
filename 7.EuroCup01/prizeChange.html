@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="page-view-size" content="1280*720" />
+<title>page03 prizeChange</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<style type="text/css">
+    #divfocus{border:3px solid #ff0; width:135px; height: 44px; position: absolute; top: 260px; left: 196px; z-index:9;}
+</style>
+</head>
+
+<body>
+
+
+    <!--bg start-->
+   <div class="jpdhBg">
+   		<!--divfocus start-->
+   		<div id="divfocus"></div>
+   		<!--divfocus end-->
+
+   		
+      <!--page03top start-->
+      <p class="page03top">500000</p>
+      <!--page03top end-->
+
+
+      <!--page03main start-->
+      <ul class="page03main">
+        <li class="p03mLi00">
+          <ul>
+            <li class="jpImg"><img src="images/yxtkIcon.png" /></li>
+            <li class="jpName">院线通卡X1</li>
+            <li class="jf">积分：<span class="red">20000</span></li>
+            <li id="index0" class="dhBtn"></li>
+          </ul>
+        </li>
+        <li class="p03mLi01">
+          <ul>
+            <li class="jpImg"><img src="images/yxtkIcon.png" /></li>
+            <li class="jpName">院线通卡X2</li>
+            <li class="jf">积分：<span class="red">38000</span></li>
+            <li id="index1" class="dhBtn"></li>
+          </ul>
+        </li>
+        <li class="p03mLi02">
+          <ul>
+            <li class="jpImg"><img src="images/50yhfkIcon.png" /></li>
+            <li class="jpName">50元话费卡</li>
+            <li class="jf">积分：<span class="red">25000</span></li>
+            <li id="index2" class="dhBtn"></li>
+          </ul>
+        </li>
+        <li class="p03mLi03">
+          <ul>
+            <li class="jpImg"><img src="images/100yhfkIcon.png" /></li>
+            <li class="jpName">100元话费卡</li>
+            <li class="jf">积分：<span class="red">25000</span></li>
+            <li id="index3" class="dhBtn"></li>
+          </ul>
+        </li>
+        <li class="p03mLi04">
+          <ul>
+            <li class="jpImg"><img src="images/sybyIcon.png" /></li>
+            <li class="jpName">首映包月</li>
+            <li class="jf">积分：<span class="red">10000</span></li>
+            <li id="index4" class="dhBtn"></li>
+          </ul>
+        </li>
+        <li class="p03mLi05">
+          <ul>
+            <li class="jpImg"><img src="images/kdpIcon.png" /></li>
+            <li class="jpName">看大片包月</li>
+            <li class="jf">积分：<span class="red">10000</span></li>
+            <li id="index5" class="dhBtn"></li>
+          </ul>
+        </li>
+        <li class="p03mLi06">
+          <ul>
+            <li class="jpImg"><img src="images/sybyIcon.png" /></li>
+            <li class="jpName">首映包月</li>
+            <li class="jf">积分：<span class="red">1000</span></li>
+            <li id="index6" class="dhBtn"></li>
+          </ul>
+        </li>
+        <li class="p03mLi07">
+          <ul>
+            <li class="jpImg"><img src="images/kdpIcon.png" /></li>
+            <li class="jpName">看大片包月</li>
+            <li class="jf">积分：<span class="red">25000</span></li>
+            <li id="index7" class="dhBtn"></li>
+          </ul>
+        </li>
+      </ul>
+      <!--page03main end-->
+
+
+      <!--p03bottomBbtn start-->
+      <img id="index8" src="images/wyjcSmallBtn.png" class="p03bottomBbtn p03wyjcBtn" />
+      <img id="index9" src="images/djjlBtn.png" class="p03bottomBbtn djjlBtn" />
+      <img id="index10" src="images/fhBtn.png" class="p03bottomBbtn p03fhBtn" />
+      <!--p03bottomBbtn end-->
+
+
+      <!-- start-->
+      <!-- end-->
+
+
+
+
+   </div>
+    <!--bg end-->
+
+    <!--JS start-->
+    <script type="text/javascript" src="js/iptv_common.js"></script>
+    <script type="text/javascript">
+      var first = 0;
+
+
+       //焦点框数组
+      var focusArray=new Array();
+      <!--定焦-->
+      function list_focus_jiao(left, top, width, height){
+            var focus = document.getElementById("divfocus");
+            focus.style.left = left+"px";
+            focus.style.top = top+"px";
+            if(focusArray[first].width != null){
+                focus.style.width = width+"px";
+            }
+            if(focusArray[first].height != null){
+                focus.style.height = height+"px";
+            }
+        }
+
+
+        function list_focus(index){
+            
+            for(var i=0; i<11;i++){
+              var focus = document.getElementById("index"+i);
+              if(i==index){
+                        focus.style.height = focusArray[index].height+"px";
+                        focus.style.width = focusArray[index].width+"px";
+                        focus.style.left = focusArray[index].left+"px";
+                        focus.style.top = focusArray[index].top+"px";
+                        //focus.style.zIndex = focusArray[index].zIndex;
+                        //focus.style.border = "3px solid #ff0";
+                        //focus.src = focusArray[index].src;
+                        list_focus_jiao(focusArray[index].divleft, focusArray[index].divtop, focusArray[index].divwidth, focusArray[index].divheight);
+                        
+                        
+              }
+
+            }
+        }
+
+      focusArray[0]={
+        left:135,
+        top:85,
+        width:135,
+        height:44,    
+        divleft:196,
+        divtop:260,
+        divwidth:135,
+        divheight:44,
+        src:"changeSuccess00.html"         
+       };
+
+
+      focusArray[1]={
+        left:135,
+        top:85,
+        width:135,
+        height:44,    
+        divleft:491,
+        divtop:260,
+        divwidth:135,
+        divheight:44,
+        src:"changeSuccess01.html"         
+       };
+
+
+      focusArray[2]={
+        left:135,
+        top:85,
+        width:135,
+        height:44,    
+        divleft:780,
+        divtop:260,
+        divwidth:135,
+        divheight:44,
+        src:"changeSuccess02.html"         
+       };
+
+
+      focusArray[3]={
+        left:135,
+        top:85,
+        width:135,
+        height:44,    
+        divleft:1070,
+        divtop:260,
+        divwidth:135,
+        divheight:44,
+        src:"changeSuccess03.html"         
+       };
+
+
+      focusArray[4]={
+        left:135,
+        top:85,
+        width:135,
+        height:44,    
+        divleft:196,
+        divtop:460,
+        divwidth:135,
+        divheight:44,
+        src:"changeSuccess05.html"         
+       };
+
+
+      focusArray[5]={
+        left:135,
+        top:85,
+        width:135,
+        height:44,    
+        divleft:491,
+        divtop:460,
+        divwidth:135,
+        divheight:44,
+        src:"changeSuccess04.html"         
+       };
+
+
+      focusArray[6]={
+        left:135,
+        top:85,
+        width:135,
+        height:44,    
+        divleft:780,
+        divtop:460,
+        divwidth:135,
+        divheight:44,
+        src:"changeSuccess05.html"         
+       };
+
+
+      focusArray[7]={
+        left:135,
+        top:85,
+        width:135,
+        height:44,    
+        divleft:1070,
+        divtop:460,
+        divwidth:135,
+        divheight:44,
+        src:"changeSuccess04.html"         
+       };
+
+
+      focusArray[8]={
+        left:680,
+        top:630,
+        width:152,
+        height:54,    
+        divleft:676,
+        divtop:626,
+        divwidth:154,
+        divheight:54,
+        src:"guess.html"         
+       };
+
+
+
+      focusArray[9]={
+        left:870,
+        top:630,
+        width:168,
+        height:54,    
+        divleft:866,
+        divtop:626,
+        divwidth:170,
+        divheight:54,
+        src:"myChangeHistory.html"         
+       };
+
+
+
+      focusArray[10]={
+        left:1080,
+        top:630,
+        width:152,
+        height:54,    
+        divleft:1076,
+        divtop:626,
+        divwidth:154,
+        divheight:54,
+        src:"index.html"         
+       };
+
+
+
+
+
+
+       //向右
+       function moveright(){
+        if (first>=0&&first<3) {
+          first++;
+        }else if (first>3&&first<7) {
+          first++;
+        }else if (first>7&&first<10) {
+          first++;
+        }
+        list_focus(first);
+       }
+
+
+
+       //向左
+       function moveleft(){
+        if (first>0&&first<4) {
+          first--;
+        }else if (first>4&&first<8) {
+          first--;
+        }else if (first>8&&first<11) {
+          first--;
+        }
+        list_focus(first);
+       }
+
+
+
+
+       //向下
+       function movedown(){
+        if (first>=0&&first<4) {
+          first = first + 4;
+        }else if (first>3&&first<8) {
+          first = 8;
+        }
+        list_focus(first);
+       }
+
+
+
+
+       //向上
+       function moveup(){
+        if (first>3&&first<8) {
+          first = first - 4;
+        }else if (first>7&&first<11) {
+          first = 6;
+        }
+        list_focus(first);
+       }
+
+
+
+       //确认键
+       function insert(index){
+        window.location.href = focusArray[first].src;
+       }
+
+
+
+
+
+
+   		backurl = "index.html";//刷新
+    </script>
+
+    <!--JS end-->
+</body>
+</html>

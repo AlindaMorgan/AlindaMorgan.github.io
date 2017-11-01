@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Global control*/
+body{margin:0; padding:0; font:20px sans-serif,"黑体"; width:auto; height:auto; color:#fff; font-family:"黑体"; font-weight:normal;}
+/*CSS reset*/
+ul,li,b,img,input,p{margin:0; padding:0; list-style:none; border:0; outline:none;}
+a,a:hover,a:visited{text-decoration:none; display:block; color:inherit;}
+
+
+/*indexPage*/
+.indexBg{width: 1280px; height: 720px; background: url(../images/HDbg.jpg) no-repeat; overflow: hidden; margin: 0 auto;}
+/* topHD */
+.topHD{}
+.topHD li{position: absolute; top: 96px;}
+.dy{width: 100px; height: 62px; left: 830px; background: url(../images/dy.png) no-repeat;}
+.dySelected{width: 100px; height: 62px; left: 830px; background: url(../images/dySelected.png) no-repeat;}
+.dsj{width: 140px; height: 62px; left: 1020px; background: url(../images/dsj.png) no-repeat;}
+.dsjSelected{width: 140px; height: 62px; left: 1020px; background: url(../images/dsjSelected.png) no-repeat;}
+/* box */
+.ypList{width: 1050px; height: 500px; position: absolute; top: 180px; left: 142px; /* overflow: hidden; */}
+.ypList li{width: 180px; position: absolute;}
+/* The Same CSS Of ypList */
+.yp00,.yp02,.yp04,.yp05,.yp07,.yp09{height: 312px; top: 20px;}
+.yp01,.yp03,.yp06,.yp08{height: 312px; top: 60px;}
+/* icon */
+.icon{width: 77px; height: 77px; position: absolute; top: -5px; left: -7px; z-index: 9;}
+.mfIcon{background: url(../images/mfIcon.png) no-repeat;}
+.ffIcon{background: url(../images/ffIcon.png) no-repeat;}
+.poster{width: 180px; height: 266px; position: absolute; top: 0px; left: 0px; z-index: 0;}
+/* textBox */
+.textBox{width: 180px; height: 41px; position: absolute; top: 225px; left: 0px; z-index: 9;}
+.blackBg{width: 180px; height: 41px; position: absolute; top: 0px; left: 0px; background-color: #000; display: inline-block; opacity: 0.8;}
+.textTitle{width: 180px; height: 41px; line-height: 41px; position: absolute; top: 0px; left: 0px; display: inline-block; text-align: center; overflow: hidden;}
+/* ykrsBox */
+.ykrsBox{background: #FECC40; width: 180px; color: #323234; height: 41px; position: absolute; top: 266px; left: 0px;}
+.ykrsBox span{display: inline-block; position: absolute;}
+.ykData{top: 6px; left: 16px; font-size: 26px; width: 86px; text-align: center; overflow: hidden;}
+.ryk{top: 12px; left: 102px; font-size: 18px;}
+/* ypList */
+.yp00{left: 0px;}
+.yp01{left: 210px;}
+.yp02{left: 420px;}
+.yp03{left: 630px;}
+.yp04{left: 840px;}
+.sxyBtn{width: 180px; height: 62px; position: absolute; top: 416px; left: 413px; }
+.xiyBtn{background: url(../images/xiyBtn.png) no-repeat;}
+.siyBtn{background: url(../images/siyBtn.png) no-repeat;}

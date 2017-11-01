@@ -1,0 +1,249 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Global control*/
+body{margin:0; padding:0; font:16px sans-serif,"黑体"; width:auto; height:auto; color:#fff; font-family:"黑体"; font-weight:normal;}
+/*CSS reset*/
+ul,li,b,img,h1,input,p{margin:0; padding:0; list-style:none; border:0; outline:none;}
+a,a:hover,a:visited{text-decoration:none; display:block; color:inherit;}
+
+
+/*背景*/
+.bg{width: 1280px; height: 720px; background: url(../images/bg.jpg) no-repeat; overflow: hidden;}
+/* indexPage */
+.indexBg{width: 1280px; height: 720px; background: url(../images/indexBg.jpg) no-repeat; overflow: hidden;}
+/* indexLeft */
+.indexLeft{width: 492px; height: 351px; position: absolute; top: 207px; left: 100px;}
+.jcskText{position: absolute; left: 8px; top: 5px; width: 480px; height: 24px; line-height: 24px; color: #333;}
+.gdText{position: absolute; top: 0px; left: 80px; width: 393px; overflow: hidden; height: 24px;}
+.indexPic0{width: 470px; height: 156px; position: absolute; top: 30px; left: 10px;}
+.indexPic1{width: 229px; height: 140px; position: absolute; top: 200px; left: 10px;}
+.indexPic2{width: 229px; height: 140px; position: absolute; top: 200px; left: 250px;}
+/* indexWyjcBtn */
+.indexWyjcBtn{width: 197px; height: 196px; position: absolute; top: 300px; left: 830px;}
+/* indexBottomBtn */
+.indexBottomBtn{}
+.indexBottomBtn img{position: absolute; top: 580px;}
+.wdzcBtn{width: 307px; height: 126px; left: 130px;}
+.njpqBtn{width: 309px; height: 134px; left: 500px;}
+.zmwfBtn{width: 319px; height: 135px; left: 880px;}
+
+
+/* page01 */
+.jcBg{width: 1280px; height: 720px; background: url(../images/jcBg.jpg) no-repeat; overflow: hidden;}
+/* page01top */
+.page01top{}
+.page01top li{position: absolute; top: 35px; color: #fff;}
+.page01top .page01tLeft{font-size: 28px; font-weight: bold; color: #75ac3a; left: 63px;}
+.page01tLeft span{color: #fff;}
+.page01Right{font-size: 18px; left: 1030px; width: 110px; text-align: center;}
+/* page01main */
+.page01main{}
+.page01main li{position: absolute; font-size: 30px;}
+/* p01line00 */
+.p01line00{top: 248px;}
+.bsTime{width: 200px; text-align: center; left: 90px;}
+.zdIcon,.kdIcon{width: 27px; height: 27px; top: 4px;}
+.page01main .zdIcon{left: 300px;}
+.zdName,.kdName{width: 120px; text-align: center;}
+.zdName{color: #ffe400; left: 330px;}
+.vs{width: 30px; left: 440px;}
+.kdName{color: #85e1ff; left: 470px;}
+.page01main .kdIcon{left: 590px;}
+.score{width: 90px; text-align: center; left: 650px;}
+.zsIcon,.pjIcon,.zfIcon{width: 65px; height: 39px; top: -3px;}
+.zsIcon{background: url(../images/win.png) no-repeat; left: 800px;}
+.pjIcon{background: url(../images/deuce.png) no-repeat; left: 940px;}
+.zfIcon{background: url(../images/lose.png) no-repeat; left: 1080px;}
+/* p01line01 */
+.p01line01{top: 318px;}
+/* p01line02 */
+.p01line02{top: 388px;}
+/* p01line03 */
+.p01line03{top: 457px;}
+/* p01line04 */
+.p01line04{top: 526px;}
+/* page01bottom */
+.page01bottom{}
+.page01bottom li{position: absolute; top: 590px;}
+.p01bLeft{left: 90px; width: 520px; font-size: 22px;}
+.p01bRight{}
+.p01bRight img{position: absolute; top: 5px; width: 152px; height: 54px;}
+.tjBtn{left: 850px;}
+.qxBtn{left: 1030px;}
+
+
+
+/* page02 */
+.myPageBg{width: 1280px; height: 720px; background: url(../images/myPageBg.jpg) no-repeat; overflow: hidden;}
+/* mpTop */
+.mpTop{}
+.mpTop li{position: absolute; color: #fff;}
+.mpTopLeft{font-size: 24px; font-weight: bold; width: 90px; text-align: center; left: 198px; top: 68px;}
+.mpTopRight{font-size: 20px; left: 1030px; top: 30px; width: 110px; text-align: center;}
+/* mpMain */
+.mpMain{}
+.mpMain li{position: absolute; font-size: 30px;}
+/* p01line00 */
+.mpLine00{top: 264px;}
+.mpMain .sc{width: 130px; text-align: center; left: 90px;}
+/* .zdIcon,.kdIcon{width: 27px; height: 27px; top: 4px;} */
+.mpMain .zdIcon{left: 230px;}
+/* .mpMain .zdName,.mpMain .kdName{width: 100px; text-align: center;} */
+.mpMain .zdName{color: #ffe400; left: 255px;}
+.mpMain .vs{width: 30px; left: 376px;}
+.mpMain .kdName{color: #85e1ff; left: 408px;}
+.mpMain .kdIcon{left: 525px;}
+.result{width: 143px; text-align: center; left: 563px;}
+.resultIcon{width: 65px; height: 39px; left: 750px;}
+.myProfit{width: 90px; left: 880px; text-align: center;}
+.tzTime{width: 180px; left: 1010px; text-align: center;}
+/* mpLine01 */
+.mpLine01{top: 333px;}
+/* mpLine02 */
+.mpLine02{top: 403px;}
+/* mpLine03 */
+.mpLine03{top: 471px;}
+/* mpLine04 */
+.mpLine04{top: 540px;}
+/* myPageBottom */
+.myPageBottom{}
+.myPageBottom li{width: 152px; height: 54px; position: absolute; top: 614px;}
+.syBtn{left: 100px;}
+.xyBtn{left: 290px;}
+.wyjcSmallBtn{left: 840px;}
+.fhBtn{left: 1020px;}
+
+
+
+
+
+
+
+/* page03 */
+.jpdhBg{width: 1280px; height: 720px; background: url(../images/jpdhBg.jpg) no-repeat; overflow: hidden;}
+/* page03top */
+.page03top{font-size: 24px; text-align: center; width: 125px; position: absolute; top: 60px; left: 1120px;}
+/* page03main */
+.page03main{}
+.page03main li{width: 280px; height: 160px; position: absolute;}
+.p03mLi00{top: 180px; left: 65px;}
+.p03mLi01{top: 180px; left: 360px;}
+.p03mLi02{top: 180px; left: 650px;}
+.p03mLi03{top: 180px; left: 940px;}
+.p03mLi04{top: 380px; left: 65px;}
+.p03mLi05{top: 380px; left: 360px;}
+.p03mLi06{top: 380px; left: 650px;}
+.p03mLi07{top: 380px; left: 940px;}
+.jpImg{width: 126px; height: 127px;}
+.page03main .jpName{font-size: 26px; width: 150px; height: 36px; position: absolute; left: 135px; top: 10px;}
+.page03main .jf{font-size: 22px; width: 135px; height: 26px; position: absolute; left: 135px; top: 50px;}
+.red{color: #b42104;}
+.page03main .dhBtn{width: 135px; height: 44px; background: url(../images/dhBtn.png) no-repeat; position: absolute; left: 135px; top: 85px;}
+/* p03bottomBbtn */
+.p03bottomBbtn{width: 152px; height: 54px; position: absolute; top: 630px;}
+.p03wyjcBtn{left: 680px;}
+.djjlBtn{width: 168px; left: 870px;}
+.p03fhBtn{left: 1080px;}
+
+
+
+
+
+
+/* page04 */
+.zysxBg{width: 1280px; height: 720px; background: url(../images/zysxBg.jpg) no-repeat; overflow: hidden;}
+
+
+
+/* page05 */
+.zmjcBg{width: 1280px; height: 720px; background: url(../images/zmjcBg.jpg) no-repeat; overflow: hidden;}
+
+
+
+/* page06 */
+.p06title{font-size: 42px; width: 360px; letter-spacing: 0.1em; position: absolute; top: 50px; left: 500px;}
+/* p06main */
+.p06main{width: 923px; height: 436px; background: url(../images/dhjl.png) no-repeat; position: absolute; top: 150px; left: 170px;}
+/* p06fhBtn */
+.p15fhBtn,.p06fhBtn{width: 153px; height: 54px; position: absolute; top: 630px; left: 560px;}
+
+
+
+
+
+
+/* page07 */
+.p17title,.p15title,.p11title,.p10title,.p09title,.p08title,.p07title{font-size: 42px; width: 1280px; text-align: center; letter-spacing: 0.1em; position: absolute; top: 50px; left: 0px;}
+/* p07main */
+.p15main,.p11main,.p10main,.p09main,.p08main,.p07main{width: 923px; height: 436px; background: url(../images/middleBg.png) no-repeat; position: absolute; top: 180px; left: 300px;}
+.p07main li{font-size: 32px; position: absolute;}
+.p07li00{top: 80px; left: 100px;}
+.p07li01{top: 150px; left: 100px;}
+.p07li02{top: 220px; left: 100px;}
+.orange{font-size: 42px; color: #ff7800;}
+.zjBtn{width: 89px; height: 46px; position: absolute; left: 350px;}
+/* p07fhBtn */
+.p10zlycBtn,.p09zlycBtn,.p08jxtzBtn,.p07ljtzBtn{width: 152px; height: 54px; position: absolute; top: 580px; left: 360px;}
+.p10fhBtn,.p09fhBtn,.p08fhBtn,.p07fhBtn{width: 153px; height: 54px; position: absolute; top: 580px; left: 730px;}
+
+/* page08 */
+.p08title{}/*和page07title样式一样*/
+.p08main{}/*和page07main样式一样*/
+.p15li00,.p11li02,.p11li01,.p11li00,.p10li00,.p09li00,.p08li00{font-size: 28px; width: 590px; text-align: center; position: absolute; top: 140px; left: 34px;}
+.p08jxtzBtn{}/*和p07ljtzBtn样式一样*/
+.p08fhBtn{}/*和p07fhBtn样式一样*/
+
+/* page09 */
+.p09title{}/*和page07title样式一样*/
+.p09main{}/*和page07main样式一样*/
+.p09li00{}/*和p08li00样式一样*/
+.p09jxtzBtn{}/*和p07ljtzBtn样式一样*/
+.p09fhBtn{}/*和p07fhBtn样式一样*/
+
+/* page10 */
+.p10title{}/*和page07title样式一样*/
+.p10main{}/*和page07main样式一样*/
+.p10li00{}/*和p08li00样式一样*/
+.p10jxtzBtn{}/*和p07ljtzBtn样式一样*/
+.p10fhBtn{}/*和p07fhBtn样式一样*/
+
+
+/* page11 */
+.p11title{}/*和page07title样式一样*/
+.p11main{}/*和page07main样式一样*/
+.p11li00{top: 90px;}/*和p08li00样式一样*/
+.p11li01{top: 150px; text-align: left; left: 60px;}/*和p08li00样式一样*/
+.p11li02{top: 200px; text-align: left; left: 60px;}/*和p08li00样式一样*/
+.p11li01 b,.p11li02 b{color: #fff100;}
+.p11li01 input,.p11li02 input{width: 390px; height: 39px; font-size: 28px; z-index: 999; /* position: absolute; left: 80px; top: 0px; */}
+.p11qrBtn{width: 153px; height: 54px; position: absolute; top: 580px; left: 560px;}
+
+/* page12页面与page11完全一样，故不添加任何样式 */
+/* page13页面与page11完全一样，故不添加任何样式 */
+/* page14页面与page11完全一样，故不添加任何样式 */
+
+
+
+/* page15 */
+.p15title{}/*和page07title样式一样*/
+.p15main{}/*和page07main样式一样*/
+.p15li00{}/*和p08li00样式一样*/
+.p15fhBtn{top: 580px;}/*和p07fhBtn样式一样*/
+
+
+/* page16页面与page11完全一样，故不添加任何样式 */
+
+/* page17 */
+.p17title{}/*和page07title样式一样*/
+.p17main{width: 999px; height: 438px; background: url(../images/dhcgBg.png) no-repeat; position: absolute; top: 180px; left: 130px;}
+.p17main li{position: absolute;}
+.p17li00{top: 32px; left: 40px;}
+.p17li01{font-size: 34px; top: 160px; left: 616px;}
+.p17li02{font-size: 26px; left: 616px; top: 230px;}
+.p17li03{font-size: 26px; left: 616px; top: 280px;}
+/* gklj */
+.gklj{font-size: 26px; color: #ff5400; font-weight: bold; position: absolute; top: 650px; left: 730px;}
+
+
+/* page18页面与page17完全一样，故不添加任何样式 */

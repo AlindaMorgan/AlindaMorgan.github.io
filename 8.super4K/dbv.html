@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="page-view-size" content="1920*1080" />
+<title>4K dbv</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<style type="text/css">
+    #divfocus{
+      border:6px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0px 0px 20px #fff;
+      width: 256px; 
+      height: 336px; 
+      position: absolute; 
+      top: 402px; 
+      left: 190px; 
+      z-index:9;
+      display: block;
+     }
+    
+</style>
+</head>
+
+<body>
+    <!--divfocus start-->
+    <div id="divfocus"></div>
+    <!--divfocus end-->
+
+    <!--bg start-->
+   <div class="dbvBg">
+
+
+
+    <!-- 只是加载，不显示 start-->
+    <div style="display: none;">
+      <img src="images/dbvPic01.png" />
+      <img src="images/dbvPic02.png" />
+      <img src="images/dbvPic03.png" />
+      <img src="images/dbvPic04.png" />
+    </div>
+    <!-- 只是加载，不显示 end-->
+
+   <!-- 影片海报列表 start-->
+   <ul class="dbv">
+     <li id="index1" class="dbvli01"></li>
+     <li id="index2" class="dbvli02"></li>
+     <li id="index3" class="dbvli03"></li>
+     <li id="index4" class="dbvli04"></li>
+   </ul>
+   <!-- 影片海报列表 end-->
+
+       
+   </div>
+    <!--bg end-->
+
+    <!--JS start-->
+    <script type="text/javascript" src="js/iptv_common.js"></script>
+    <script type="text/javascript">
+      var first = 1;
+
+      //定焦
+      function list_focus_jiao(left, top, width, height){
+            var focus = document.getElementById("divfocus");
+            focus.style.left = left+"px";
+            focus.style.top = top+"px";
+            if(focusArray[first].width != null){
+                focus.style.width = width+"px";
+            }
+            if(focusArray[first].height != null){
+                focus.style.height = height+"px";
+            }
+        }
+
+
+        function list_focus(index){
+      
+          list_focus_jiao(focusArray[index].divleft, focusArray[index].divtop, focusArray[index].divwidth, focusArray[index].divheight);/*
+            for(var i=0; i<12;i++){
+              var focus = document.getElementById("index"+i);
+              
+              if(i==index){
+                focus.style.height = focusArray[index].height+"px";
+                focus.style.width = focusArray[index].width+"px";
+                focus.style.left = focusArray[index].left+"px";
+                focus.style.top = focusArray[index].top+"px";
+                //focus.style.zIndex = 999;
+                //focus.style.background = focusArray[index].changeBg;                        
+              }
+              else{
+                focus.style.background = focusArray[index].bg;  
+              }
+            }*/
+          }
+
+        //焦点框数组
+        var focusArray=new Array();
+        
+        //幻灯片
+        focusArray[1]={
+          divwidth:256,
+          divheight:336,
+          divtop:402,
+          divleft:190
+        };
+
+        focusArray[2]={
+          divwidth:256,
+          divheight:336,
+          divtop:402,
+          divleft:622
+        };
+
+        focusArray[3]={
+          divwidth:256,
+          divheight:336,
+          divtop:402,
+          divleft:1047
+        };
+        
+        focusArray[4]={
+          divwidth:256,
+          divheight:336,
+          divtop:402,
+          divleft:1470
+        };
+
+        //向右
+        function moveright(){
+          if (first>0&&first<4) {
+            first++;
+          }
+          list_focus(first);
+        }
+
+        //向左
+        function moveleft(){
+          if (first>1&&first<5) {
+            first--;
+          }
+          list_focus(first);
+        }
+
+
+        //确认键
+        /*function insert(index){
+        }*/
+        
+
+        backurl = "index.html";//刷新
+    </script>
+    <!--JS end-->
+</body>
+</html>

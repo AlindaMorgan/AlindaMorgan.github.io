@@ -1,0 +1,246 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Global control*/
+body{ 
+  margin: 0 auto; 
+  padding: 0; 
+  overflow-x: hidden;
+  color: #fff; 
+  font-weight: normal;
+}
+/*CSS RESET*/
+a,p,img,ul,li{
+  margin: 0; 
+  padding: 0; 
+  border :0; 
+  outline: none;
+  list-style: none;
+}
+a,a:hover,a:visited{
+  text-decoration: none; 
+  display: block; 
+  color: inherit;
+}
+a:hover{
+  color: #fffc00;
+}
+*
+{
+    font-family: '微软雅黑',Helvetica,Arial,sans-serif;
+}
+img {
+	width: 100%;
+  display: block;
+  border: 0;
+}
+/* CSS REPEAT */
+.content{
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+/* topNav */
+.topNav{
+  width: 60%;
+  height: auto;
+  margin: 2.3% auto 0;
+  position: absolute;
+  top: 7%;
+  left: 20%;
+  [;margin: 0.6% auto 0;]/*safari hack*/
+}
+.topNav li{
+  float: left;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+/* rightNav */
+.rightNav{
+  width: 14%;
+  height: auto;
+  position: fixed;
+  top: 6.5%;
+  right: 0px;
+  display: none;
+}
+.rightNav li{
+  font-size: 26px;
+  font-weight: bold;
+}
+.rNavLi01{
+  width: 100%;
+  height: auto;
+  padding: 6% 0% 10% 10%;
+  text-align: center;
+  background: url(../img/fhsyIcon.png) no-repeat;
+}
+.rNavLi02{
+  width: 95%;
+  height: auto;
+  /* padding: 36% 0% 10% 20%; */
+  margin: 120% 0% 0% 5%;
+  text-align: left;
+  /* background: url(../img/kfzyIcon.png) no-repeat; */
+}
+.rNavLi02 a{
+	position: absolute;
+  	top: 64%;
+    left: 32%;
+    [;
+    	top: 64%;
+    	left: 32%;	
+    ]/*safari hack*/
+}
+.rNavLi03{
+  width: 100%;
+  height: auto;
+  margin: 20% 0% 30% 36%;
+  text-align: left;
+  background: url(../img/topIcon.png) no-repeat;
+}
+.rNavLi03 a{
+  padding: 7% 0% 7% 20%;
+}
+
+
+/* 百视通专区 */
+.bstTopNav{}
+.bstTopNav li{
+  width: 33.3%;
+}
+.cpnr{
+  width: 50%;
+  height: auto;
+  position: absolute;
+  left: 25%;
+}
+.cpnr li{
+  width: 83%;
+  padding: 0% 0% 5% 9%;
+}
+.bstYs{
+  top: 12%;
+}
+.bstBtn{
+  width: 18%;
+  height: auto;
+  position: absolute;
+  top: 18%;
+}
+.bstBtn img{
+}
+.gqBtn01{
+  left: 50%;
+  width: 16%;
+}
+.bqBtn01{
+  left: 70%;
+  width: 16%;
+}
+.gqBtn02{
+  left: 30%;
+  top: 45%;
+}
+.bqBtn02{
+  left: 53%;
+  top: 45%;
+}
+.bstSe{
+  top: 46%;
+}
+.bstTy{
+  top: 81.7%;
+}
+
+/* 电脑端 */
+/* @media only screen and (min-width: 940px) and (max-width: 1366px){
+
+  .content{
+    max-width: 1366px;
+    min-width: 940px;
+  }
+  .topNav li{
+    font-size: 26px;
+  }
+.topNav{
+    margin: 2.5% auto 0;
+  }
+
+} */
+
+/* 平板端 */
+@media only screen and (min-width: 480px) and (max-width: 940px){
+
+  .topNav li{
+    font-size: 16px;
+  }
+  .topNav{
+    margin: 2% auto 0;
+  }
+  .rightNav li{
+  	font-size: 16px;
+  	font-weight: normal;
+  }
+  .rNavLi01{
+  	padding: 6% 0% 10% 12%;
+  	letter-spacing: -1px;
+  }
+  .rNavLi02 a{
+  	top: 64%;
+    left: 32%;	
+  }
+  .rNavLi03{
+  	padding-left: 5%;
+  }	
+
+}
+
+
+
+/* 手机端 */
+@media only screen and (max-width: 479px){
+
+  .topNav li{
+    font-size: 10px;
+  }
+  .topNav{
+    margin: 1.8% auto 0;
+  }
+  .rightNav li{
+  	font-size: 6px;
+  	font-weight: normal;
+  }
+  .rNavLi01{
+  	padding: 6% 0% 10% 22%;
+  	letter-spacing: 0px;
+  }
+  .rNavLi02 a{
+  	top: 63%;
+  	left: 30%;  	
+  }
+  .rNavLi03{
+  	margin-top: 20%;
+  	letter-spacing: -1px;
+  }	
+  .rNavLi03 a {
+    padding: 15% 0% 7% 43%;
+}
+
+}
+
+
+
+/* 平板端 */
+@media only screen and (min-width: 769px) and (max-width: 980px){
+  .rightNav  .rNavLi02{font-size: 22px;}
+}
+
+
+
+/* 大屏幕平板端 */
+@media only screen and (min-width: 981px) and (max-width: 1254px){
+  .rightNav  .rNavLi02{font-size: 22px;}
+}

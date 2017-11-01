@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="page-view-size" content="1280*720" />
+<title>欧洲杯竞猜页面</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<style type="text/css">
+    #divfocus{border:3px solid #37E8B1; width:200px; height: 200px; position: absolute; top: 296px; left: 825px; z-index:9;}
+</style>
+</head>
+
+<body>
+
+
+    <!--bg start-->
+   <div class="indexBg">
+   		<!--divfocus start-->
+   		<div id="divfocus"></div>
+   		<!--divfocus end-->
+
+
+   		<!--indexLeft start-->
+   		<div class="indexLeft">
+   			<div class="jcskText">
+   				<b>竞猜实况：</b>
+   				<p class="gdText">
+   					<marquee direction="left" behavior="scroll" scrollamount="3" width="395" style=" position:absolute; left:75px;"> 
+   						07634***315用户竞猜赢得66000积分,07660***465用户竞猜赢得62000积分,075574***008用户竞猜赢得38000积分,07620***042用户竞猜赢得32000积分,075546***026用户竞猜赢得32000积分,07584***837用户竞猜赢得28000积分,075701***324用户竞猜赢得25600积分,02008***885用户竞猜赢得16000积分,07564***862用户竞猜赢得16000积分,06634***563用户竞猜赢得16000积分,
+   					 </marquee>
+   				</p>
+   			</div>
+   			<img src="images/indexPic0.png" class="indexPic0" />
+   			<img src="images/indexPic1.png" class="indexPic1" />
+   			<img src="images/indexPic2.png" class="indexPic2" />
+   		</div>
+   		<!--indexLeft end-->
+
+
+   		<!--indexWyjcBtn start-->
+   		<img id="index0" src="images/wyjcBtn.png" class="indexWyjcBtn" />
+   		<!--indexWyjcBtn end-->
+
+
+   		<!--indexBottomBtn start-->
+   		<div class="indexBottomBtn">
+   			<img id="index1" src="images/wdzcBtn.png" class="wdzcBtn" />
+   			<img id="index2" src="images/njpqBtn.png" class="njpqBtn" />
+   			<img id="index3" src="images/zmwfBtn.png" class="zmwfBtn" />
+   		</div>
+   		<!--indexBottomBtn end-->
+   </div>
+    <!--bg end-->
+
+    <!--JS start-->
+    <script type="text/javascript" src="js/iptv_common.js"></script>
+    <script type="text/javascript">
+    	var first = 0;
+
+
+    	 //焦点框数组
+      var focusArray=new Array();
+      <!--定焦-->
+      function list_focus_jiao(left, top, width, height){
+            var focus = document.getElementById("divfocus");
+            focus.style.left = left+"px";
+            focus.style.top = top+"px";
+            if(focusArray[first].width != null){
+                focus.style.width = width+"px";
+            }
+            if(focusArray[first].height != null){
+                focus.style.height = height+"px";
+            }
+        }
+
+
+        function list_focus(index){
+            
+            for(var i=0; i<4;i++){
+              var focus = document.getElementById("index"+i);
+              if(i==index){
+                        focus.style.height = focusArray[index].height+"px";
+                        focus.style.width = focusArray[index].width+"px";
+                        focus.style.left = focusArray[index].left+"px";
+                        focus.style.top = focusArray[index].top+"px";
+                        //focus.style.zIndex = focusArray[index].zIndex;
+                        //focus.style.border = "3px solid #ff0";
+                        //focus.src = focusArray[index].src;
+                        list_focus_jiao(focusArray[index].divleft, focusArray[index].divtop, focusArray[index].divwidth, focusArray[index].divheight);
+                        
+                        
+              }
+
+            }
+        }
+
+	focusArray[0]={
+	          left:830,
+	          top:300,
+	          width:197,
+	          height:196,    
+	          divleft:825,
+	          divtop:296,
+	          divwidth:200,
+	          divheight:200,
+	          src:"guess.html"         
+	 };
+
+	focusArray[1]={
+	          left:130,
+	          top:580,
+	          width:307,
+	          height:126,    
+	          divleft:126,
+	          divtop:575,
+	          divwidth:307,
+	          divheight:126,
+	          src:"myGuess.html"         
+	 };
+
+	focusArray[2]={
+	          left:500,
+	          top:580,
+	          width:309,
+	          height:134,    
+	          divleft:494,
+	          divtop:575,
+	          divwidth:309,
+	          divheight:134,
+	          src:"prizeChange.html"         
+	 };
+
+	focusArray[3]={
+	          left:880,
+	          top:580,
+	          width:319,
+	          height:135,    
+	          divleft:874,
+	          divtop:575,
+	          divwidth:319,
+	          divheight:135,
+	          src:"rule00.html"         
+	 };
+
+
+
+	 //向下
+	 function movedown(){
+	 	if (first==0) {
+	 		first = 3;
+	 	}
+	 	list_focus(first);
+	 }
+
+	 //向左
+	 function moveleft(){
+	 	if (first>1&&first<4) {
+	 		first--;
+	 	}
+	 	list_focus(first);
+	 }
+
+	 //向右
+	 function  moveright(){
+	 	if (first>0&&first<3) {
+	 		first++;
+	 	}
+	 	list_focus(first);
+	 }
+
+	 //向上
+	 function moveup(){
+	 	if (first>0&&first<4) {
+	 		first = 0;
+	 	}
+	 	list_focus(first);
+	 }
+
+	 //确认键
+	 function insert(index){
+	 	window.location.href = focusArray[first].src;
+	 }
+
+   		backurl = "index.html";//刷新
+    </script>
+
+    <!--JS end-->
+</body>
+</html>

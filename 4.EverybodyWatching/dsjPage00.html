@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="page-view-size" content="1280*720" />
+<title>dsjPage</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<style type="text/css">
+    #divfocus{
+      width: 180px; height: 307px;
+      box-shadow: 0 0 20px #fff; 
+      border: 4px solid #fff; 
+      border-radius: 4px;
+      position: absolute; 
+      top: 196px; 
+      left: 138px; 
+      z-index:99;
+      /* display: none; */
+    }
+</style>
+</head>
+
+<body>
+
+
+  <!--divfocus start-->
+  <div id="divfocus"></div>
+  <!--divfocus end-->
+
+  <!--indexBg start -->
+  <div class="indexBg">
+
+
+    <!--  加载    不显示 start -->
+    <div style="display: none;">
+      <img src="HDbg.jpg" />
+      <img src="dy.png" />
+      <img src="dySelected.png" />
+      <img src="dsj.png" />
+      <img src="dsjSelected.png" />
+      <img src="mfIcon.png" />
+      <img src="ffIcon.png" />
+      <img src="xiyBtn.png" />
+      <img src="siyBtn.png" />
+    </div>
+    <!--  加载    不显示 end -->
+
+    <!--topHD start -->
+    <ul class="topHD">
+      <li id="index6" class="dy"></li>
+      <li class="dsjSelected"></li>
+    </ul>
+    <!--topHD end -->
+
+
+    <!--ypList start -->
+      <ul id="ypList" class="ypList">
+        <li id="index0" class="yp00"> 
+          <p class="icon mfIcon"></p>
+          <img src="images/poster.png" class="poster" />
+          <p class="textBox">
+            <span class="blackBg"></span>
+            <!-- <marquee behavior="alternate" direction="">欢乐颂</marquee> -->
+            <span class="textTitle">欢乐颂</span>
+          </p>
+          <p class="ykrsBox">
+            <span class="ykData">123456</span>
+            <span class="ryk">人已看</span>
+          </p>
+        </li>
+        <li id="index1" class="yp01">
+          <p class="icon mfIcon"></p>
+          <img src="images/poster.png" class="poster" />
+          <p class="textBox">
+            <span class="blackBg"></span>
+            <!-- <marquee behavior="alternate" direction="">欢乐颂欢乐颂哈哈哈哈哈哈哈啦啦啦啦啦吗</marquee> -->
+            <span id="textTitle" class="textTitle">
+              <marquee behavior="alternate" direction="left"  scrollamount="4">欢乐颂欢乐颂哈哈哈哈哈哈哈啦啦啦啦啦吗</marquee>
+            </span>
+          </p>
+          <p class="ykrsBox">
+            <span class="ykData">123456</span>
+            <span class="ryk">人已看</span>
+          </p>
+        </li>
+        <li id="index2" class="yp02">
+          <p class="icon mfIcon"></p>
+          <img src="images/poster.png" class="poster" />
+          <p class="textBox">
+            <span class="blackBg"></span>
+            <!-- <marquee behavior="alternate" direction="">欢乐颂</marquee> -->
+            <span class="textTitle">欢乐颂</span>
+          </p>
+          <p class="ykrsBox">
+            <span class="ykData">123456</span>
+            <span class="ryk">人已看</span>
+          </p>
+        </li>
+        <li id="index3" class="yp03">
+          <p class="icon mfIcon"></p>
+          <img src="images/poster.png" class="poster" />
+          <p class="textBox">
+            <span class="blackBg"></span>
+            <!-- <marquee behavior="alternate" direction="">欢乐颂</marquee> -->
+            <span class="textTitle">欢乐颂</span>
+          </p>
+          <p class="ykrsBox">
+            <span class="ykData">123456</span>
+            <span class="ryk">人已看</span>
+          </p>
+        </li>
+        <li id="index4" class="yp04">
+          <p class="icon mfIcon"></p>
+          <img src="images/poster.png" class="poster" />
+          <p class="textBox">
+            <span class="blackBg"></span>
+            <!-- <marquee behavior="alternate" direction="">欢乐颂</marquee> -->
+            <span class="textTitle">欢乐颂</span>
+          </p>
+          <p class="ykrsBox">
+            <span class="ykData">123456</span>
+            <span class="ryk">人已看</span>
+          </p>
+        </li>
+        <li id="index5" class="xiyBtn sxyBtn"></li>
+        <!-- <li id="index5" class="siyBtn sxyBtn"></li> -->
+      </ul>
+    <!--ypList end -->
+
+
+    <!-- start -->
+    <!-- end -->
+
+
+    <!-- start -->
+    <!-- end -->
+
+
+
+
+
+  </div>
+  <!--indexBg end -->
+
+
+  <!--JS start-->
+  <script type="text/javascript" src="js/iptv_common.js"></script>
+  <script type="text/javascript">
+    var first = 0;
+
+    var ypPoster = 0;//设置影片海报初始值为0
+
+     //焦点框数组
+    var focusArray=new Array();
+    //定焦
+    function list_focus_jiao(left, top, width, height,display){
+      var focus = document.getElementById("divfocus");
+      focus.style.left = left+"px";
+      focus.style.top = top+"px";
+      if(focusArray[first].width != null){
+          focus.style.width = width+"px";
+      }
+      if(focusArray[first].height != null){
+          focus.style.height = height+"px";
+      }
+    }
+
+
+    function list_focus(index){
+        
+      for(var i=0; i<7;i++){
+        var focus = document.getElementById("index"+i);
+        if(i==index){
+            focus.style.height = focusArray[index].height+"px";
+            focus.style.width = focusArray[index].width+"px";
+            focus.style.left = focusArray[index].left+"px";
+            focus.style.top = focusArray[index].top+"px";
+            list_focus_jiao(focusArray[index].divleft, focusArray[index].divtop, focusArray[index].divwidth, focusArray[index].divheight);       
+        }
+      }
+    }
+
+    //焦点框数组
+    focusArray[0]={
+      left:0,
+      top: 20,
+      width:180,
+      height:312,    
+      divleft:138,
+      divtop: 196,
+      divwidth:180,
+      divheight:307,
+      //src:"changeSuccess00.html"         
+     };
+
+    focusArray[1]={
+      left:210,
+      top: 60,
+      width:180,
+      height:312,    
+      divleft:348,
+      divtop: 236,
+      divwidth:180,
+      divheight:307,
+      //src:"changeSuccess00.html"         
+     };
+
+    focusArray[2]={
+      left:420,
+      top: 20,
+      width:180,
+      height:312,    
+      divleft:558,
+      divtop: 196,
+      divwidth:180,
+      divheight:307,
+      //src:"changeSuccess00.html"         
+     };
+
+    focusArray[3]={
+      left:630,
+      top: 60,
+      width:180,
+      height:312,    
+      divleft:768,
+      divtop: 236,
+      divwidth:180,
+      divheight:307,
+      //src:"changeSuccess00.html"         
+     };
+
+    focusArray[4]={
+      left:840,
+      top: 20,
+      width:180,
+      height:312,    
+      divleft:978,
+      divtop: 196,
+      divwidth:180,
+      divheight:307
+      //src:"changeSuccess00.html"         
+     };
+
+     focusArray[5]={
+      left:413,
+      top:416,
+      width:180,
+      height:62,
+      divleft:552,
+      divtop:593,
+      divwidth:176,
+      divheight:60,
+      src:"dsjPage01.html"
+     };
+
+     focusArray[6]={
+      left:830,
+      top:96,
+      width:140,
+      height:62,
+      divleft:810,
+      divtop:87,
+      divwidth:140,
+      divheight:60,
+      src:"index.html"
+     };
+
+
+     //定义影片列表
+     var ypList = document.getElementById("ypList");
+
+
+     //向右
+     function moveright(){
+      if (first>=0&&first<4) {
+        first++;
+        ypPoster=first;
+      }else if (first>3&&first<7) {
+        return;
+      }
+      list_focus(first);
+      //alert(first);
+     }
+
+
+     //向左
+     function moveleft(){
+	     if(first>0&&first<5){
+        first--;
+        ypPoster=first;
+       }else if (first>4&&first<7 || first==0) {
+        return;
+       }
+      list_focus(first);
+      //alert(first);
+     }
+
+
+
+     //向下
+     function movedown(){
+      if (first>=0&&first<5) {
+        first = 5;
+      }else if (first==6) {
+        first = ypPoster;
+      }
+      list_focus(first);
+      //alert(first);
+     }
+
+
+
+
+     //向上
+     function moveup(){
+      if (first==5) {
+        first = ypPoster;
+        //alert(first);
+      }else if (first>=0&&first<5) {
+        first = 6;
+      }
+      list_focus(first);
+     }
+
+
+
+     //确认键
+     function insert(index){
+        window.location.href = focusArray[first].src;
+     }
+
+
+
+     //当影片名字过长时
+    /*  var tt = document.getElementById("textTitle");
+     if (tt.length>16) {
+      var mq = document.createElement("marquee");
+      mq.innerHtml = tt.innerHtml;
+      tt.appendChild(mq);
+     }*/
+
+
+
+
+  	backurl = "index.html";//刷新
+
+
+  </script>
+
+  <!--JS end-->
+</body>
+</html>

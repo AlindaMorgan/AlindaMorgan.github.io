@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="GBK">
+	<title>百视通专区</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<div class="content">
+
+		<img src="img/bstBg.jpg" />
+		<!-- 顶部导航 -->
+		<ul class="topNav bstTopNav">
+			<li class="bstTnli01"><a href="#ys">影视类产品</a></li>
+			<li class="bstTnli02"><a href="#se">少儿类产品</a></li>
+			<li class="bstTnli03"><a href="#ty">体育类产品</a></li>
+		</ul>
+		<!-- 右侧导航 -->
+		<ul class="rightNav">
+			<li class="rNavLi01"><a href="javascript:;">返回首页</a></li>
+			<li class="rNavLi02"><a href="javascript:;">客户指引</a><img src="img/kfzyIcon.png" /></li>
+			<li class="rNavLi03"><a href="javascript:;">TOP</a></li>
+		</ul>
+		<!-- 百视通影视类产品 -->
+		<ul class="cpnr bstYs" id="ys">
+			<li class="bstYs01">
+				<img src="img/bstYs01.jpg" />
+				<a href="javascript:;" class="gqBtn01 bstBtn"><img src="img/gqBtn01.png" /></a>
+				<a href="javascript:;" class="bqBtn01 bstBtn"><img src="img/bqBtn01.png" /></a>
+			</li>
+			<li class="bstYs02">
+				<img src="img/bstYs02.jpg" />
+				<a href="javascript:;" class="gqBtn02 bstBtn"><img src="img/gqBtn02.png" /></a>
+				<a href="javascript:;" class="bqBtn02 bstBtn"><img src="img/bqBtn02.png" /></a>
+			</li>
+			<li class="bstYs03">
+				<a href="javascript:;"><img src="img/bstYs03.jpg" /></a>
+			</li>
+			<li class="bstYs04">
+				<a href="javascript:;"><img src="img/bstYs04.jpg" /></a>				
+			</li>
+		</ul>
+		<!-- 百视通少儿类产品 -->
+		<ul class="cpnr bstSe" id="se">
+			<li class="bstSe01">
+				<a href="javascript:;"><img src="img/bstSe01.jpg" /></a>
+			</li>
+			<li class="bstSe02">
+				<a href="javascript:;"><img src="img/bstSe02.jpg" /></a>
+			</li>
+			<li class="bstSe03">
+				<a href="javascript:;"><img src="img/bstSe03.jpg" /></a>
+			</li>
+			<li class="bstSe04">
+				<a href="javascript:;"><img src="img/bstSe04.jpg" /></a>
+			</li>
+		</ul>
+		<!-- 百视通体育类产品 -->
+		<ul class="cpnr bstTy" id="ty">
+			<li class="bstTy01">
+				<a href="javascript:;"><img src="img/bstTy01.jpg" /></a>
+			</li>
+			<li class="bstTy02">
+				<a href="javascript:;"><img src="img/bstTy02.jpg" /></a>
+			</li>
+		</ul>
+
+
+	</div>
+
+</body>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(window).scroll(function(e) {
+			if($(window).scrollTop() > $(window).height()){
+				$('.rightNav').show();
+			}else {
+				$('.rightNav').hide();
+			}
+		});
+		$('.rNavLi03').click(function(e) {
+			$('body,html').animate({'scrollTop':'0'},1000);
+		});
+	})
+</script>
+
+</html>

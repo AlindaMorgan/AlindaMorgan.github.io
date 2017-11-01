@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Global control*/
+body{margin:0; padding:0; font:18px sans-serif,"黑体"; width:auto; height:auto; color:#9A9A9A; font-family:"黑体"; font-weight:normal;}
+/*CSS reset*/
+ul,li,a,p,i,img,h2,h3,h4,h5{margin:0; padding:0; list-style:none; border:0; outline:none;}
+a,a:hover,a:visited{text-decoration:none; display:block; color:inherit;}
+
+
+/*背景*/
+.bg{width: 1280px; height: 720px; background: url(../images/bg.jpg) no-repeat; overflow: hidden; margin: 0 auto;}
+
+/* QRcode */
+.QRcode{width:301px; height: 301px; position: absolute; top: 203px; left: 654px;}
+
+/* main */
+.box{width: 220px; height: 390px; position: relative; top: 180px; left: 990px; overflow: hidden;}
+.main{width: 660px; height: 390px; position: absolute; top: 0px; left: 0px;}
+.li{width: 110px; height: 130px; position: absolute; top: 0px; left: 0px;}
+.li1{top: 130px;}
+.li2{top: 260px;}
+.li3{left: 120px;}
+.li4{top: 130px; left: 120px;}
+.li5{top: 260px; left: 120px;}
+.li img{width: 90px; height: 90px; position: absolute; opacity: 0.3; border-radius: 10px; -webkit-border-radius: 10px;}
+.li p{width: 110px; text-align: center; position: absolute; left: -12px; top: 100px;}
+.part1{position: absolute; top: 0px; left: 220px;}
+.part2{position: absolute; top: 0px; left: 440px;}
+.li .show{display: none;}
+#index0{opacity: 1;}
+/* arrow */
+.arrow img{position: absolute; top: 350px;}
+.la{left: 982px; display: none;}
+.ra{left: 1260px;}
+/* popUp */
+#popUp{display:none;}
+.popUpBg{width:1280px; height:720px; background:#000; position: absolute; top: 0px; left: 0px; opacity:0.6; z-index:9;}
+.PUB{width: 493px; height: 259px; position: absolute; z-index: 99; top: 220px; left: 380px;}
+.pbli0{font-size: 38px; width: 463px; text-align: center; color: #000; z-index: 99; position: absolute; top: 280px; left: 395px;}
+.brown{color: #8b602f;}
+.btn{width: 189px; height: 50px; position: absolute; top: 380px; z-index: 99;}
+.qrBtn{left: 420px;}
+.qxBtn{left: 630px;}
+/* noUser */
+.noUser{font-size: 30px; position: absolute; top: 300px; left: 1055px; display: none;}
+/* jbcg */
+#jbcg{display: none;}
+.jbcgBg{background: url(../images/jbcgBg.png) no-repeat; width:416px; height:122px; z-index:99; position:absolute; top:560px; left:430px;}

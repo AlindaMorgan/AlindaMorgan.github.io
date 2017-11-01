@@ -1,0 +1,54 @@
+@charset "utf-8";
+/*global control*/
+body{margin:0; padding:0; font:24px Arial,sans-serif,"黑体"}
+/*css reset*/
+h1,h2,h3,h4,h5,p,ul,li,dl,dt,dd,img,ol,li,dl,dt,dd,form,label,input{margin:0; padding:0; list-style:none}
+/*公共样式*/
+a:link,a:visited,a:hover{text-decoration:none; display:block}
+.cssJL{background:url(img/cssJL.png) no-repeat}
+/*bg*/
+#bg{width:1280px; height:720px; margin:0 auto; background:url(img/bg.jpg) no-repeat; position:relative}
+/*蒙版背景*/
+.mask{background:rgba(0,0,0,0.4); position:absolute; top:100px; left:50px; border:2px solid #fff; -webkit-border-radius:5px; border-radius:5px; -webkit-box-shadow:5px 5px 6px rgba(0,0,0,0.4); box-shadow:5px 5px 6px rgba(0,0,0,0.4); color:#fff}
+/*蓝光专区*/
+h1{font-size:48px; color:#fff; opacity:0.7; position:absolute; top:24px; left:60px}
+/*频道直播&点播专区里的帮助按钮*/
+.helpWrap{width:300px; height:30px; position:absolute; top:42px; right:50px}
+.helpWrap P,.helpWrap a{float:left; margin-left:20px}
+.helpWrap P{width:30px; height:30px}
+.helpWrapOne{background-position:-6px -384px}
+.helpWrapTwo{background-position:-45px -384px}
+.helpWrap a{color:#fff}
+.helpWrap a:hover{color:#F00}
+/*频道直播&点播专区*/
+h2 a{color:inherit}
+h2 a:hover{color:#F00}
+.onDemandSection{left:220px}
+.current{color:#FFE001; border-bottom:3px solid #FFE001;}
+.content{width:90%; height:auto; position:absolute; left:60px}
+.content li{width:auto; height:auto; float:left; -webkit-box-sizing:border-box; box-sizing:border-box}
+.content .noPR{padding-right:0}
+.content li a{border:3px solid #4C9AFF}
+.content li a:hover{-webkit-box-shadow:0 0 50px #ffe001; box-shadow:0 0 50px #ffe001;  border:3px solid #ff0}
+/*帮助页*/
+/*title*/
+.title h1{opacity:1}
+.title h1 .help{float:left; font-size:48px; -webkit-text-shadow:1px 1px 3px #000; text-shadow:1px 1px 3px #000}
+.title h1 p{float:left; opacity:0.8; font-size:32px; letter-spacing:0.02em; width:auto; height:auto; padding:10px 0 0 20px}
+.title .cssJL{background-position:-164px -375px; float:left; width:2px; height:40px; padding-right:20px}
+/*substance*/
+.substance{width:90%; height:auto; position:absolute; top:120px; left:60px}
+.substance .right .mask{top:0}
+/*substance left*/
+.left{float:left; width:24%}
+.left li{margin-bottom:30px}
+.button{color:#fff; width:270px; height:60px}
+.button:hover{color:#F00}
+.now{border:3px solid #ff0; -webkit-box-shadow:0 0 35px #ffe001; box-shadow:0 0 35px #ffe001; -webkit-border-radius:15px; border-radius:15px; box-sizing:border-box}
+.left h3{font-style:36px; text-align:center; line-height:60px}
+/*substance right*/
+.right{width:70%; height:auto; float:right}
+.right .mask{position:relative; left:-2%}
+.substance h4{font-size:32px; padding:20px 30px}
+.substance h5{font-size:24px; color:#BDBCBC; padding-left:30px; line-height:2em}
+.line{width:120px; height:2px; background:#F00}

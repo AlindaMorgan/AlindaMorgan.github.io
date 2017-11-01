@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Global control*/
+body{ 
+  margin: 0 auto; 
+  padding: 0; 
+  overflow-x: hidden;
+  color: #fff; 
+  font-weight: normal;
+}
+/*CSS RESET*/
+a,p,img,ul,li{
+  margin: 0; 
+  padding: 0; 
+  border :0; 
+  outline: none;
+  list-style: none;
+}
+a,a:hover,a:visited{
+  text-decoration: none; 
+  display: block; 
+  color: inherit;
+}
+a:hover{
+  color: #fffc00;
+}
+*
+{
+    font-family: '微软雅黑',Helvetica,Arial,sans-serif;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 0;
+  outline: none;
+}
+
+/* CSS REPEAT */
+

@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Global control*/
+body{margin:0; padding:0; font:30px sans-serif,"黑体"; width:auto; height:auto; color:#000; font-family:"黑体"; font-weight:normal;}
+/*CSS reset*/
+ul,li,a,p,input,img,h1{margin:0; padding:0; list-style:none; border:0; outline:none;}
+a,a:hover,a:visited{text-decoration:none; display:block; color:inherit;}
+
+/*same style*/
+.bg{position:absolute; left:0; top:0; width:1280px; height:720px; background:url(../images/bg.jpg) no-repeat; margin: 0 auto;}
+/* titles */
+.bigTitle{position: absolute; top: 65px; left: 520px; font-size: 42px; color: #fff;}
+.titles p{color: #aedeff; font-size: 30px; position: absolute; left: 520px;}
+.titles .timeTips{font-size: 32px; position: absolute; top: 140px; color: #fff;}
+.p00{top: 200px;}
+.p01{top: 240px;}
+.p02{top: 280px;}
+/* moreStar */
+.moreStar .p03,.moreStar .top,.moreStar .bottom{color: #aedeff; font-size: 30px; position: absolute; left: 520px;}
+.p03{top: 280px;}
+/* .top{top: 370px;}
+.bottom{top: 400px; width: 700px; height: 80px;}
+button01 */
+.button01{width:262px; height: 93px; position: absolute; top: 380px; left: 820px;}
+.button01{display: block;}
+/* button00 */
+.button00,.button02,.button03{width:262px; height: 93px; position: absolute; top: 380px; left: 520px; display: block;}
+.button00p{position: absolute; top: -38px; left: 5px; font-size: 24px; color: #fff;}
+/* bottomTips */
+.bottomTips{display: block;}
+/* .bottomTipsP{position: absolute; bottom: 20px; left: 80px; font-size: 18px; color: #fff;}  */
+.bottomTipsUl{position: absolute; bottom: 130px; left: 530px; font-size: 24px; color: #fff;}
+.button04,.button05{position: absolute; bottom: 123px; right: 158px;}
+.button05{right: 50px;}
+
+
+
+/* button02 */
+.button02{display: none;}
+.button02p{width:480px; height:30px; position: absolute; top: -38px; left: 60px; font-size: 22px; color: #aedeff;}
+/* button03 */
+.button03{left:520px; display: none;}
+.button03p{width:320px; height:80px; position: absolute; top: 0px; left: 280px; font-size: 22px; color: #aedeff;}
+/* tips */
+.tips00,.tips01{width: 742px; height: 238px; position: absolute; top: 250px; left: 444px; z-index: 9999;}
+.tips00{display: none;}
+.tips01{display: none;}
+
+
+/* popUp01 */
+.popUp01{width:1280px; height: 720px; position: absolute; top: 0px; left: 0px; background: url(../images/popUp.png) no-repeat; z-index: 99;}
+.popUp01{display: none;}
+.p06{font-size: 40px; position: absolute; top: 155px; left: 510px;}
+.popUp01 input{width: 552px; height: 82px; line-height: 82px; border: 1px solid #000; position: absolute; top: 250px; left: 400px; font-size: 50px; text-align: center;}
+.button06{width: 262px; height: 68px; position: absolute; top: 388px; left: 533px;}

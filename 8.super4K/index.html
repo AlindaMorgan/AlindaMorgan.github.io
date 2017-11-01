@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="page-view-size" content="1920*1080" />
+<title>超级4K电视端演讲PPT</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<style type="text/css">
+    #divfocus{
+      /* border:2px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0px 0px 30px #fff; */
+      width: 1456px; 
+      height: 556px; 
+      background: url(images/blueLight.png) no-repeat;
+      position: absolute; 
+      top: 272px; 
+      left: 232px; 
+      z-index:9;
+     }
+    
+</style>
+</head>
+
+<body>
+    <!--divfocus start-->
+    <div id="divfocus"></div>
+    <!--divfocus end-->
+
+    <!--bg start-->
+   <div class="indexBg">
+
+
+
+    <!-- 只是加载，不显示 start-->
+    <div style="display: none;">
+      <img src="images/banner00.png" />
+      <img src="images/banner01.png" />
+      <img src="images/banner02.png" />
+      <img src="images/banner03.png" />
+      <img src="images/banner04.png" />
+      <img src="images/banner05.png" />
+      <img src="images/dot0.png" />
+      <img src="images/dot1.png" />
+      <img src="images/indexBtn00.png" />
+      <img src="images/indexBtn01.png" />
+      <img src="images/indexBtn02.png" />
+      <img src="images/indexBtn03.png" />
+      <img src="images/indexBtn04.png" />
+      <img src="images/indexBtn05.png" />
+    </div>
+    <!-- 只是加载，不显示 end-->
+
+
+       
+     <!-- 图片切换 start-->
+     <div class="box">
+       <ul id="bs" class="banners">
+         <li id="index0" class="banner00"></li>
+         <li id="index1" class="banner01"></li>
+         <li id="index2" class="banner02"></li>
+         <li id="index3" class="banner03"></li>
+         <li id="index4" class="banner04"></li>
+         <li id="index5" class="banner05"></li>
+       </ul>
+     </div>
+     <!-- 图片切换 end-->
+
+
+
+     <!--dot start-->
+     <ol class="dot">
+       <li class="dot0 active" id="dot0"></li>
+       <li class="dot1" id="dot1"></li>
+       <li class="dot2" id="dot2"></li>
+       <li class="dot3" id="dot3"></li>
+       <li class="dot4" id="dot4"></li>
+       <li class="dot5" id="dot5"></li>
+     </ol>
+     <!--dot end-->
+
+    <!-- Btns start-->
+    <ul class="indexBtn">
+      <li id="index6" class="indexBtn00"></li>
+      <li id="index7" class="indexBtn01"></li>
+      <li id="index8" class="indexBtn02"></li>
+      <li id="index9" class="indexBtn03"></li>
+      <li id="index10" class="indexBtn04"></li>
+      <li id="index11" class="indexBtn05"></li>
+    </ul>
+    <!-- Btns end-->
+    
+   </div>
+    <!--bg end-->
+
+    <!--JS start-->
+    <script type="text/javascript" src="js/iptv_common.js"></script>
+    <script type="text/javascript">
+      var first = 0;
+
+        //白色焦点框
+        var wf = document.getElementById("divfocus");
+        //banners
+        var bs = document.getElementById("bs");
+        //小圆点
+        var dot0 = document.getElementById("dot0");
+        var dot1 = document.getElementById("dot1");
+        var dot2 = document.getElementById("dot2");
+        var dot3 = document.getElementById("dot3");
+        var dot4 = document.getElementById("dot4");
+        var dot5 = document.getElementById("dot5");
+        //底部按钮
+        var btn0 = document.getElementById("index6");
+        var btn1 = document.getElementById("index7");
+        var btn2 = document.getElementById("index8");
+        var btn3 = document.getElementById("index9");
+        var btn4 = document.getElementById("index10");
+        var btn5 = document.getElementById("index11");
+        //设置幻灯片初始值为0
+        var pic = 0;
+
+        //焦点框数组
+        var focusArray=new Array();
+        
+        //幻灯片
+        focusArray[0]={};
+        focusArray[1]={};
+        focusArray[2]={};
+        focusArray[3]={};
+        focusArray[4]={};
+        focusArray[5]={};
+        //底部按钮
+        focusArray[6]={};
+        focusArray[7]={};
+        focusArray[8]={};
+        focusArray[9]={};
+        focusArray[10]={};
+        focusArray[11]={};
+      
+
+        //向右
+        function moveright(){
+          //幻灯片
+          if (first==0) {
+            bs.style.left = -1400+"px";
+            first = 1;
+            pic = 1;
+            dot0.className="dot0";
+            dot1.className="dot1 active";
+          }else if (first==1) {
+            bs.style.left = -2800+"px";
+            first = 2;
+            pic = 2;
+            dot1.className="dot1";
+            dot2.className="dot2 active";
+          }else if (first==2) {
+            bs.style.left = -4200+"px";
+            first = 3;
+            pic = 3;
+            dot2.className="dot2";
+            dot3.className="dot3 active";
+          }else if (first==3) {
+            bs.style.left = -5600+"px";
+            first = 4;
+            pic = 4;
+            dot3.className="dot3";
+            dot4.className="dot4 active";
+          }else if (first==4) {
+            bs.style.left = -7000+"px";
+            first = 5;
+            pic = 5;
+            dot4.className="dot4";
+            dot5.className="dot5 active";
+          }else if (first==5) {
+            bs.style.left = 0+"px";
+            first = 0;
+            pic = 0;
+            dot5.className="dot5";
+            dot0.className="dot0 active";
+          }else if (first==6) {//底部按钮
+            first = 7;
+            btn0.style.background = "url(images/indexBtn00.png) no-repeat";
+            btn1.style.background = "url(images/indexBtnS01.png) no-repeat";
+          }else if (first==7) {
+            first = 8;
+            btn1.style.background = "url(images/indexBtn01.png) no-repeat";
+            btn2.style.background = "url(images/indexBtnS02.png) no-repeat";
+          }else if (first==8) {
+            first = 9;
+            btn2.style.background = "url(images/indexBtn02.png) no-repeat";
+            btn3.style.background = "url(images/indexBtnS03.png) no-repeat";
+          }else if (first==9) {
+            first = 10;
+            btn3.style.background = "url(images/indexBtn03.png) no-repeat";
+            btn4.style.background = "url(images/indexBtnS04.png) no-repeat";
+          }else if (first==10) {
+            first = 11;
+            btn4.style.background = "url(images/indexBtn04.png) no-repeat";
+            btn5.style.background = "url(images/indexBtnS05.png) no-repeat";
+          }else if (first==11) {
+            first = 6;
+            btn5.style.background = "url(images/indexBtn05.png) no-repeat";
+            btn0.style.background = "url(images/indexBtnS00.png) no-repeat";
+            //alert(first);
+          }
+
+          //list_focus(first);
+        }
+
+        //向左
+        function moveleft(){
+          //幻灯片
+          if (first==0) {
+            bs.style.left = -7000+"px";
+            first = 5;
+            pic = 5;
+            dot0.className="dot0";
+            dot5.className="dot5 active";
+          }else if (first==1) {
+            bs.style.left = 0+"px";
+            first = 0;
+            pic = 0;
+            dot1.className="dot1";
+            dot0.className="dot0 active";
+          }else if (first==2) {
+            bs.style.left = -1400+"px";
+            first = 1;
+            pic = 1;
+            dot2.className="dot2";
+            dot1.className="dot1 active";
+          }else if (first==3) {
+            bs.style.left = -2800+"px";
+            first = 2;
+            pic = 2;
+            dot3.className="dot3";
+            dot2.className="dot2 active";
+          }else if (first==4) {
+            bs.style.left = -4200+"px";
+            first = 3;
+            pic = 3;
+            dot4.className="dot4";
+            dot3.className="dot3 active";
+          }else if (first==5) {
+            bs.style.left = -5600+"px";
+            first = 4;
+            pic = 4;
+            dot5.className="dot5";
+            dot4.className="dot4 active";
+          }else if (first==6) {//底部按钮
+            first = 11;
+            btn0.style.background = "url(images/indexBtn00.png) no-repeat";
+            btn5.style.background = "url(images/indexBtnS05.png) no-repeat";
+          }else if (first==7) {
+            first = 6;
+            btn1.style.background = "url(images/indexBtn01.png) no-repeat";
+            btn0.style.background = "url(images/indexBtnS00.png) no-repeat";
+          }else if (first==8) {
+            first = 7;
+            btn2.style.background = "url(images/indexBtn02.png) no-repeat";
+            btn1.style.background = "url(images/indexBtnS01.png) no-repeat";
+          }else if (first==9) {
+            first = 8;
+            btn3.style.background = "url(images/indexBtn03.png) no-repeat";
+            btn2.style.background = "url(images/indexBtnS02.png) no-repeat";
+          }else if (first==10) {
+            first = 9;
+            btn4.style.background = "url(images/indexBtn04.png) no-repeat";
+            btn3.style.background = "url(images/indexBtnS03.png) no-repeat";
+          }else if (first==11) {
+            first = 10;
+            btn5.style.background = "url(images/indexBtn05.png) no-repeat";
+            btn4.style.background = "url(images/indexBtnS04.png) no-repeat";
+          }
+
+          //list_focus(first);
+        }
+
+        //向下
+        function movedown(){
+          if (first>=0&&first<6) {
+            first = 6;
+            //alert(first);
+            wf.style.display = "none";
+            btn0.style.background = "url(images/indexBtnS00.png) no-repeat";
+          }
+
+          //list_focus(first);
+        }
+
+        //向上
+        function moveup(){
+          if (first>5&&first<12) {
+            first = pic;
+            wf.style.display = "block";
+            btn0.style.background = "url(images/indexBtn00.png) no-repeat";
+            btn1.style.background = "url(images/indexBtn01.png) no-repeat";
+            btn2.style.background = "url(images/indexBtn02.png) no-repeat";
+            btn3.style.background = "url(images/indexBtn03.png) no-repeat";
+            btn4.style.background = "url(images/indexBtn04.png) no-repeat";
+            btn5.style.background = "url(images/indexBtn05.png) no-repeat";
+          }
+
+
+          //list_focus(first);
+        }
+
+
+        //确认键
+        function insert(index){
+          if (first==6) {
+            window.location.href = "P60.html";
+          }else if (first==7) {
+            window.location.href = "P30.html";
+          }
+        }
+        
+
+        backurl = "index.html";//刷新
+    </script>
+    <!--JS end-->
+</body>
+</html>

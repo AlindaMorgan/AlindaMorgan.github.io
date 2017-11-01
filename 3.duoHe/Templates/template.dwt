@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>多禾</title>
+<!-- TemplateEndEditable -->
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="EditRegion4" -->
+<style type="text/css">
+	
+</style>
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+	<div id="header_wrap">
+    	<div class="header">
+            <div class="logo">
+            	<h1><a href="#">多禾</a></h1>
+            	<img src="../img/logo.gif"/>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="../index.html">多禾首页</a></li>
+                    <li><a href="#">品牌介绍</a></li>
+                    <li><a href="#">企业动态</a></li>
+                    <li><a href="list.html">店面展示</a></li>
+                    <li><a href="#">美食天地</a></li>
+                    <li><a href="#">科学饮食</a></li>
+                    <li><a href="#">加盟连锁</a></li>
+                    <li><a href="detail.html">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+	<!-- TemplateBeginEditable name="EditRegion5" -->
+    <div class="banner">
+      <div class="hot_img"><a href="#"><img src="../img/01.jpg"/></a></div>
+    </div>
+	<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="EditRegion3" -->
+    <div class="content"></div>
+    <!-- TemplateEndEditable -->
+    <div class="bottomWrap">
+    	<div class="bottomT">
+        	<ul>
+            	<li><a href="#">首 页</a><span>|</span></li>
+            	<li><a href="#">美食天地</a><span>|</span></li> 
+            	<li><a href="#">门店展示</a><span>|</span></li> 
+            	<li><a href="#">加盟连锁</a><span>|</span></li> 
+            	<li><a href="#">订货专区</a><span>|</span></li> 
+            	<li><a href="#">在线客服：</a></li>
+            	<li><a href="#"><img src="../img/qq.png"/></a></li>
+            	<li><a href="#"><img src="../img/qq.png"/></a></li>
+            	<li><a href="#"><img src="../img/qq.png"/></a></li>
+            </ul>
+        </div>
+        <div  style="clear:both;"></div>
+    	<div class="bottomB">
+        	<p>版权所有（C）多禾餐饮管理有限公司 Copyright DuoHe All Rights Reserved.鲁ICP备10038276号-1</p>
+        </div>
+    </div>
+<img src="../img/pic.gif" width="50" height="12" />
+</body>
+</html>

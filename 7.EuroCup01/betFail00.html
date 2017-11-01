@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="page-view-size" content="1280*720" />
+<title>page09 betFail00</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<style type="text/css">
+    #divfocus{border:3px solid #ff0; width:154px; height: 54px; position: absolute; top: 576px; left: 356px; z-index:9;}
+</style>
+</head>
+
+<body>
+
+
+    <!--bg start-->
+   <div class="bg">
+   		<!--divfocus start-->
+   		<div id="divfocus"></div>
+   		<!--divfocus end-->
+
+   		
+
+      <!--h1 start-->
+      <h1 class="p09title">投注失败</h1>
+      <!--h1 end-->
+
+
+      
+      <!--p08main start-->
+      <ul class="p09main">
+        <li class="p09li00">很抱歉！你的积分不充足，请重新选择。</li>
+      </ul>
+      <!--p08main end-->
+
+
+      
+      <!--p06fhBtn start-->
+      <img id="index0" src="images/zlycBtn.png" class="p09zlycBtn" />
+      <img id="index1" src="images/fhBtn.png" class="p09fhBtn" />
+      <!--p06fhBtn end-->
+
+
+      
+      <!-- start-->
+      <!-- end-->
+
+
+
+   </div>
+    <!--bg end-->
+
+    <!--JS start-->
+    <script type="text/javascript" src="js/iptv_common.js"></script>
+    <script type="text/javascript">
+
+      var first = 0;
+
+
+       //焦点框数组
+      var focusArray=new Array();
+      <!--定焦-->
+      function list_focus_jiao(left, top, width, height){
+            var focus = document.getElementById("divfocus");
+            focus.style.left = left+"px";
+            focus.style.top = top+"px";
+            if(focusArray[first].width != null){
+                focus.style.width = width+"px";
+            }
+            if(focusArray[first].height != null){
+                focus.style.height = height+"px";
+            }
+        }
+
+
+        function list_focus(index){
+            
+            for(var i=0; i<2;i++){
+              var focus = document.getElementById("index"+i);
+              if(i==index){
+                        focus.style.height = focusArray[index].height+"px";
+                        focus.style.width = focusArray[index].width+"px";
+                        focus.style.left = focusArray[index].left+"px";
+                        focus.style.top = focusArray[index].top+"px";
+                        list_focus_jiao(focusArray[index].divleft, focusArray[index].divtop, focusArray[index].divwidth, focusArray[index].divheight);
+                        
+                        
+              }
+
+            }
+        }
+
+      focusArray[0]={
+        left:360,
+        top:580,
+        width:152,
+        height:54,    
+        divleft:356,
+        divtop:576,
+        divwidth:154,
+        divheight:54,
+        src:"page01.html"         
+       };
+
+
+      focusArray[1]={
+        left:730,
+        top:580,
+        width:153,
+        height:54,    
+        divleft:726,
+        divtop:576,
+        divwidth:155,
+        divheight:54,
+        src:"index.html"         
+       };
+
+
+
+       //向右
+       function moveright() {
+        if (first==0) {
+          first = 1;
+        }
+        list_focus(first);
+       }
+
+
+
+       //向左
+       function moveleft() {
+        if (first==1) {
+          first = 0;
+        }
+        list_focus(first);
+       }
+
+
+
+
+      //确认键
+      function insert(index) {
+        window.location.href = focusArray[first].src;
+      }
+
+   		backurl = "index.html";//刷新
+    </script>
+
+    <!--JS end-->
+</body>
+</html>
