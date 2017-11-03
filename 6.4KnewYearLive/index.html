@@ -122,7 +122,7 @@
         <img src="images/selectedButton01.png" />
         <img src="images/selectedButton02.png" />
         <img src="images/selectedButton03.png" />
-        <img src="images/selectedButton04.png" />
+        <!-- <img src="images/selectedButton04.png" /> -->
         <img src="images/selectedButton05.png" />
         <img src="images/selectedButton06.png" />
         <img src="images/selectedbutton00.png" />
@@ -133,67 +133,86 @@
 
 
 
-<script type="text/javascript" src="js/iptv_common.js"></script> 
 <script type="text/javascript">
 
+    //捕获上下左右键盘按键和确认键
+    document.onkeydown=function(event){
+      var e = event || window.event || arguments.callee.caller.arguments[0];
+      if(e && e.keyCode==39){ // 按 右键 
+        moveright();
+       }
+       if(e && e.keyCode==37){ // 按 左键 
+        moveleft();
+       }
+       if(e && e.keyCode==38){ // 按 上键 
+        moveup();
+       }
+       if(e && e.keyCode==40){ // 按 下键 
+        movedown();
+       }
+       if(e && e.keyCode==13){ // 按 确认键 
+        insert();
+       }
+    };
+
     var page=1;
-  //  var first = 0;
-  //焦点框数组
-  var focusArray=new Array();
-  var focusArrayTwo=new Array();
+    var first = 0;
+    //焦点框数组
+    var focusArray=new Array();
+    var focusArrayTwo=new Array();
 
-focusArray[0]={
-	bottom:10,
-    left:520,
-    top:568,
-    width:262,
-    height:93,
-    url:"unicast/${userId}/code/${entrance}",
-    src:"images/selectedButton00.png",
-    cancelsrc: "images/button00.png"
-};
-focusArray[1]={
-	bottom:10,
-    left:780,
-    top:568,
-    width:262,
-    height:93,
-    url:"multicast/${entrance}",
-    src:"images/selectedButton01.png",
-    cancelsrc: "images/button01.png"
-};
+    focusArray[0]={
+    	bottom:10,
+        left:520,
+        top:568,
+        width:262,
+        height:93,
+        url:"unicast/${userId}/code/${entrance}",
+        src:"images/selectedButton00.png",
+        cancelsrc: "images/button00.png"
+    };
+    focusArray[1]={
+    	bottom:10,
+        left:780,
+        top:568,
+        width:262,
+        height:93,
+        url:"multicast/${entrance}",
+        src:"images/selectedButton01.png",
+        cancelsrc: "images/button01.png"
+    };
 
-focusArray[2]={
-    bottom:123,
-    right:158,
-    width:96,
-    height:51,
-    url:"hd/${entrance}",
-    src:"images/selectedButton05.png",
-    cancelsrc: "images/button05.png"
-};
+    focusArray[2]={
+        bottom:123,
+        right:158,
+        width:96,
+        height:51,
+        url:"hd/${entrance}",
+        src:"images/selectedButton05.png",
+        cancelsrc: "images/button05.png"
+    };
 
-focusArrayTwo[0]={
-	bottom:10,
-    left:520,
-    top:568,
-    width:262,
-    height:93,
-    url:"blue_light/${entrance}",
-    src:"images/selectedButton02.png",
-    cancelsrc: "images/button02.png"
-};
-focusArrayTwo[1]={
-	bottom:10,
-    left:780,
-    top:568,
-    width:262,
-    height:93,
-    url:"hd/${entrance}",
-    src:"images/selectedButton03.png",
-    cancelsrc: "images/button03.png"
-};
-  
+    focusArrayTwo[0]={
+    	bottom:10,
+        left:520,
+        top:568,
+        width:262,
+        height:93,
+        url:"blue_light/${entrance}",
+        src:"images/selectedButton02.png",
+        cancelsrc: "images/button02.png"
+    };
+    focusArrayTwo[1]={
+    	bottom:10,
+        left:780,
+        top:568,
+        width:262,
+        height:93,
+        url:"hd/${entrance}",
+        src:"images/selectedButton03.png",
+        cancelsrc: "images/button03.png"
+    };
+      
 	function moveleft(){
 		if(page==2){
 			if(first>0 && first<2){
@@ -243,55 +262,55 @@ focusArrayTwo[1]={
 			
 	}
 
-<!--定焦-->
-function list_focus(index, direction){
-	var focus = document.getElementById("index"+index);
-     focus.style.left = focusArray[index].left+"px";
-     focus.style.top = focusArray[index].top+"px";
-     focus.style.bottom = focusArray[index].bottom+"px";
-     focus.style.right = focusArray[index].right+"px";
-     focus.src=focusArray[index].src;
-     if(index<7){
-    	 if(direction=='right'){
-    		var oldFocus = document.getElementById("index"+(index-1)); 
-    		oldFocus.src=focusArray[index-1].cancelsrc;
-    	 }else if(direction=='left'){
-    		 var oldFocus = document.getElementById("index"+(index+1)); 
-    		oldFocus.src=focusArray[index+1].cancelsrc;
-    	 }
-     }
-}
-function list_focus_two(index, direction){
-	var focus = document.getElementById("index"+index);
-     focus.style.left = focusArrayTwo[index].left+"px";
-     focus.style.top = focusArrayTwo[index].top+"px";
-     focus.style.bottom = focusArrayTwo[index].bottom+"px";
-     focus.style.right = focusArrayTwo[index].right+"px";
-     focus.src=focusArrayTwo[index].src;
-     if(index<2){
-    	 if(direction=='right'){
-    		var oldFocus = document.getElementById("index"+(index-1)); 
-    		oldFocus.src=focusArrayTwo[index-1].cancelsrc;
-    	 }else if(direction=='left'){
-    		 var oldFocus = document.getElementById("index"+(index+1)); 
-    		oldFocus.src=focusArrayTwo[index+1].cancelsrc;
-    	 }
+    <!--定焦-->
+    function list_focus(index, direction){
+    	var focus = document.getElementById("index"+index);
+         focus.style.left = focusArray[index].left+"px";
+         focus.style.top = focusArray[index].top+"px";
+         focus.style.bottom = focusArray[index].bottom+"px";
+         focus.style.right = focusArray[index].right+"px";
+         focus.src=focusArray[index].src;
+         if(index<7){
+        	 if(direction=='right'){
+        		var oldFocus = document.getElementById("index"+(index-1)); 
+        		oldFocus.src=focusArray[index-1].cancelsrc;
+        	 }else if(direction=='left'){
+        		 var oldFocus = document.getElementById("index"+(index+1)); 
+        		oldFocus.src=focusArray[index+1].cancelsrc;
+        	 }
+         }
     }
-}
-  
-		var stbType = Authentication.CTCGetConfig("STBType"); 
-		//stbType ="fs";
-		if(stbType.indexOf("E900")!=-1 || stbType.indexOf("PTV8098")!=-1 || stbType.indexOf("EC6108V9")!=-1){
-			
-    	}else{
-    		page = 2;
-    		first=0;
-    		list_focus_two(0, "left");
-    		//document.getElementById("index2").style.display="none";
-    		//document.getElementById("index1").style.display="none";
-    		document.getElementById("index2").style.display="none";
-    		document.getElementById("button02").style.display="block";
-    	}
+    function list_focus_two(index, direction){
+    	var focus = document.getElementById("index"+index);
+         focus.style.left = focusArrayTwo[index].left+"px";
+         focus.style.top = focusArrayTwo[index].top+"px";
+         focus.style.bottom = focusArrayTwo[index].bottom+"px";
+         focus.style.right = focusArrayTwo[index].right+"px";
+         focus.src=focusArrayTwo[index].src;
+         if(index<2){
+        	 if(direction=='right'){
+        		var oldFocus = document.getElementById("index"+(index-1)); 
+        		oldFocus.src=focusArrayTwo[index-1].cancelsrc;
+        	 }else if(direction=='left'){
+        		 var oldFocus = document.getElementById("index"+(index+1)); 
+        		oldFocus.src=focusArrayTwo[index+1].cancelsrc;
+        	 }
+        }
+    }
+      
+	/*var stbType = Authentication.CTCGetConfig("STBType"); 
+	//stbType ="fs";*/
+	/*if(stbType.indexOf("E900")!=-1 || stbType.indexOf("PTV8098")!=-1 || stbType.indexOf("EC6108V9")!=-1){
+		
+	}else{
+		page = 2;
+		first=0;
+		list_focus_two(0, "left");
+		//document.getElementById("index2").style.display="none";
+		//document.getElementById("index1").style.display="none";
+		document.getElementById("index2").style.display="none";
+		document.getElementById("button02").style.display="block";
+	}*/
 
 
 </script>
