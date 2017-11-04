@@ -53,25 +53,45 @@
     <!--bg end-->
 
     <!--JS start-->
-    <script type="text/javascript" src="js/iptv_common.js"></script>
     <script type="text/javascript">
+
+	    //捕获上下左右键盘按键和确认键
+	    document.onkeydown=function(event){
+	      var e = event || window.event || arguments.callee.caller.arguments[0];
+	      if(e && e.keyCode==39){ // 按 右键 
+	        moveright();
+	       }
+	       if(e && e.keyCode==37){ // 按 左键 
+	        moveleft();
+	       }
+	       if(e && e.keyCode==38){ // 按 上键 
+	        moveup();
+	       }
+	       if(e && e.keyCode==40){ // 按 下键 
+	        movedown();
+	       }
+	       if(e && e.keyCode==13){ // 按 确认键 
+	        insert();
+	       }
+	    };
+
     	var first = 0;
 
 
-    	 //焦点框数组
-      var focusArray=new Array();
-      <!--定焦-->
-      function list_focus_jiao(left, top, width, height){
-            var focus = document.getElementById("divfocus");
-            focus.style.left = left+"px";
-            focus.style.top = top+"px";
-            if(focusArray[first].width != null){
-                focus.style.width = width+"px";
-            }
-            if(focusArray[first].height != null){
-                focus.style.height = height+"px";
-            }
-        }
+		//焦点框数组
+		var focusArray=new Array();
+		<!--定焦-->
+		function list_focus_jiao(left, top, width, height){
+		var focus = document.getElementById("divfocus");
+		focus.style.left = left+"px";
+		focus.style.top = top+"px";
+		if(focusArray[first].width != null){
+		    focus.style.width = width+"px";
+		}
+		if(focusArray[first].height != null){
+		    focus.style.height = height+"px";
+		}
+		}
 
 
         function list_focus(index){
